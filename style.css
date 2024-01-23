@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ----------------------- */
+:root {
+    --color1: ;
+    --color2: #126B58;
+    --color3: #FFF9E8;
+    --font-main: 'Climate Crisis', sans-serif;
+    --font-2: 'Quicksand', sans-serif;
+}
+
+
+
+
+h1 {
+    color: var(--color3);
+    font-family: var(--font-main);
+    letter-spacing: 5px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .8));
+}
+
+
+#grid {
+
+
+    height: 100vh;
+}
+
+#left {
+    display: grid;
+    grid-template-rows: auto;
+    position: relative;
+    background: var(--color2);
+}
+
+#right {
+    background: url(bright-pop-landscape-design.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+}
+
+
+#grid:has(#left.menu-open) {
+    grid-template-columns: 12% auto;
+}
+
+#grid {
+    transition: 300ms;
+    display: grid;
+    grid-template-columns: var(--left, 1px) auto;
+}
+
+#grid:has(#left.menu-open) {
+    --left: 12%;
+}
+
+
+ul {
+    position: static;
+
+    height: 75%;
+}
+
+#btn {
+    cursor: pointer;
+    position: absolute;
+    content: '';
+
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateX(110%);
+    font-family: var(--font-main);
+    color: var(--color3);
+
+}
+
+#nav {
+    font-family: var(--font-2), var(--font-main);
+
+    display: none;
+}
+
+#nav li {
+    padding: 2rem;
+
+}
+
+#nav li a {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color3);
+    font-family: var(--font-2), var(--font-main);
+
+}
+
+.fixed {
+    background-color: var(--color2);
+    height: 100vh;
+    position: fixed;
+    width: 12%;
+}
+#Duration  
+{
+    text-align: center;
+}
+
+#Duration * {
+    margin: auto    ;
+    width: 40%;
+}
+
+#Duration h2 {
+    cursor: pointer;
+}
+
+
+#Duration p {
+display: none;
+}
+
