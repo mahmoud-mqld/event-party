@@ -116,22 +116,44 @@ ul {
     position: fixed;
     width: 12%;
 }
-#Duration  
+
+
+#countdown
+{
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Details  
 {
     text-align: center;
 }
 
-#Duration * {
+#Details * {
     margin: auto    ;
     width: 40%;
 }
 
-#Duration h2 {
+#Details h2 {
     cursor: pointer;
 }
 
 
-#Duration p {
+#Details p {
 display: none;
 }
 
