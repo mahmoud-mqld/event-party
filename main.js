@@ -2,6 +2,8 @@ var initialText = "Open";
 
 $("#btn").text(initialText);
 
+
+
 $("#btn").on("click", function () {
   $("#left").toggleClass("menu-open");
   var newText = $("#btn").text() == initialText ? `  Close` : initialText;
@@ -22,6 +24,10 @@ $("#nav a").on("click", function () {
 });
 
 
+$("#close").on("click", function () {
+  $("#nav").toggle(150).toggleClass("fixed");
+
+  $("#left").removeClass("menu-open");})
 
 const targetDate = "2024-7-27 07:00:00"
 function calcCountdown(targetDate)
@@ -40,8 +46,12 @@ const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
 const hours = Math.floor((countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
 const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
-return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
+return `
+<h3 class="d"> ${days}d</h3>
+ <h3 class="h">${hours}h</h3>
+ <h3 class="m"> ${minutes}m</h3>
+ <h3 class="s">${seconds}s</h3>
+ `;
 }
 
 function displayCounter(targetDate) {
